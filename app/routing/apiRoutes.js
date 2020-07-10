@@ -5,6 +5,7 @@ Use these to handle compatability logic for friend matchup
 */
 
 let friends = require('../data/friends');
+const { parse } = require('path');
 
 module.exports = function (app) {
     app.get('/api/friends', function(request, response) {
@@ -14,12 +15,28 @@ module.exports = function (app) {
         let yourFriend = {
             name: '',
             photo: '',
+            differance: 1000
         };
-        let user = request.body;
-        console.log('The current user is: ' + user);
-
-        for () {
-            
+        let newUser = request.body; console.log('The current user is: ' + user);
+        let scoreDifference;
+        let friendsScore;
+        let userScore;
+        for (let i = 0; i < friends.length; i++){
+            let currentFriend = friends[i];
+            scoreDifference = 0;
+        
+        for (let j = 0; j < newUser.scores.length; j++){
+            friendsScore = currentFriend.scores[j];
+            userScore = newUser.scores[j];
+            scoreDifference += Math.abs(parseInt(userScore) - parseInt(friendsScore));
         }
+        if (scoreDifference <= yourFriend.differance){
+            yourFriend.name = currentFriend.name;
+            yourFriend.photo = currentFriend.photo;
+            yourFriend.differance = scoreDifference;
+        }
+    }
+    response.json(yourFriend);
+    friends.push(newUser);
     });
-}
+};

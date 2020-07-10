@@ -7,8 +7,8 @@ let PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', function(request, response) {
-    response.json(path.join(__dirname, 'public/index.html'));
+app.use(function(request, response) {
+    response.json(path.join(__dirname, 'app/public/home.html'));
 });
 
 app.listen(PORT, function() {
