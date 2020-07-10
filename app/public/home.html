@@ -16,7 +16,14 @@
     background-color: orange;
     border: solid; border-color: black;
   }
-  button{background-color: black;}
+  #btn{
+    border-color: black; border-radius: 10px; border-width: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: orange; color: black;
+  }
+  hr{background-color: black;}
+  a{color:red;}
 </style>
 </head>
 
@@ -25,14 +32,14 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1>The Office Friend Finder</h1>
+      <h1>"The Office" Friend Finder</h1>
       <hr>
       <h2>Answer a few basic questions. </h2>
-      <h2>Then find out who from The Office you would be more likely to be friends with</h2>
+      <h2>Then find out who from "The Office" you are more likely to be friends with</h2>
       <br>
 
       <div>
-        <a href="../public/survey.html"><button type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Take Survey</h4></button></a>
+        <a href="../public/survey.html"><button id="btn" type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Take Survey</h4></button></a>
       </div>
 
     </div>
