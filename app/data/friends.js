@@ -17,7 +17,7 @@ let friends = [
     {
         name: 'Pam',
         photo: '../Images/Pam_Beesley-Copy,jpg',
-        scores: ['','','','','','','','','','']
+        scores: ['3','2','5','1','4','1','3','1','5','5']
     },
     {
         name: 'Stanley',
