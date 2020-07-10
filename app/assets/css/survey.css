@@ -1,0 +1,24 @@
+
+.container{
+    background-color: gainsboro;
+}
+#submit {
+    background-color: orange; 
+    color: black; 
+    border-color: black; 
+    border-width: 7px;
+    width: max-content;
+    margin-left: auto; margin-right: auto;
+}
+a {
+    color: navy;}
+
+h2 {
+    font-weight: bold;
+}
+h3 {
+    text-align: center;
+}
+h4 {
+    text-align: center;
+}
