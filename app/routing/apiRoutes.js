@@ -58,6 +58,5 @@ module.exports = function (app) {
         friendsData.push(currentUser);
         res.json(candidateArray[0]);
         console.log("Most compatible friend: ", candidateArray[0].name, candidateArray[0].photo, candidateArray[0].totalDiff);
-
     });
 };

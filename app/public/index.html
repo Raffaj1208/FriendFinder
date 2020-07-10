@@ -4,27 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <title>FriendFinder</title>
-
-  <!-- Latest compiled and minified CSS & JS -->
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-  <!-- Font Awesome Glyphicons -->
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-<style>
-  .jumbotron{
-    background-color: orange;
-    border: solid; border-color: black;
-  }
-  #btn{
-    border-color: black; border-radius: 10px; border-width: 5px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: orange; color: black;
-  }
-  hr{background-color: black;}
-  a{color:red;}
-</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <script type="text/javascript" src="../assets/javascript/app.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
 </head>
 
 <body>
@@ -32,21 +20,21 @@
   <div class="container">
 
     <div class="jumbotron">
-      <h1>"The Office" Friend Finder</h1>
+      <h1><img src="../assets/Images/office.png" alt="The Office">"The Office" Friend Finder</h1>
       <hr>
       <h2>Answer a few basic questions. </h2>
       <h2>Then find out who from "The Office" you are more likely to be friends with</h2>
       <br>
 
-      <div>
-        <a href="../public/survey.html"><button id="btn" type="button" class="btn btn-lg btn-primary"><h4><span class="glyphicon glyphicon-list-alt"></span> Take Survey</h4></button></a>
+      <div id="btnDiv">
+        <a href="/survey"><button id="btn" type="button" class="btn btn-lg btn-primary">Take Survey</button></a>
       </div>
 
     </div>
 
     <footer class="footer">
       <div class="container">
-        <p><a href="../data/friends.js">API Friends List</a> | <a href="https://github.com/Raffaj1208/FriendFinder">GitHub Repo</a></p>
+        <p><a href="/api/friends">API Friends List</a> | <a href="https://github.com/Raffaj1208/FriendFinder">GitHub Repo</a></p>
       </div>
     </footer>
   </div>
