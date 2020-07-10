@@ -5,7 +5,7 @@ Use these to handle compatability logic for friend matchup
 */
 
 let friends = require('../data/friends');
-const { parse } = require('path');
+let path = require('path');
 
 module.exports = function (app) {
     app.get('/api/friends', function(request, response) {

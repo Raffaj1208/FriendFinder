@@ -8,8 +8,11 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(function(request, response) {
-    response.json(path.join(__dirname, 'app/public/home.html'));
+    response.json(path.join(__dirname, './app/public/home.html'));
 });
+
+require('./app/routing/htmlRoutes')(app);
+require('./app/routing/apiRoutes')(app);
 
 app.listen(PORT, function() {
     console.log('listening on: ' + PORT);
