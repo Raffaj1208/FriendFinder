@@ -5,19 +5,14 @@
   <meta charset="UTF-8">
   <title>The Office Friend Finder</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+  <link rel="stylesheet" href="../assets/css/survey.css">
+  <script type="text/javascript" src="../assets/javascript/app.js"></script>
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
-  <script type="text/javascript" async="" src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
-<style> .container {background-color: orange;}
-#submit{background-color: orange; color: black; border-color: black; border-width: 7px;}
-a{color: white;}
-h2{font-weight: bold;}
-h3{text-align: center;}
-h4{text-align: center;}
-</style>
+  <script type="text/javascript" src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +40,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+<hr>
     <h3><strong>Question 2</strong></h3>
     <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
     <select class="chosen-select" id="q2">
@@ -56,8 +51,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
-　
+<hr>
     <h3><strong>Question 3</strong></h3>
     <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
     <select class="chosen-select" id="q3">
@@ -68,8 +62,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
-　
+<hr>
     <h3><strong>Question 4</strong></h3>
     <h4>You rarely do something just out of sheer curiosity.</h4>
     <select class="chosen-select" id="q4">
@@ -80,8 +73,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
-　
+<hr>
     <h3><strong>Question 5</strong></h3>
     <h4>People can rarely upset you.</h4>
     <select class="chosen-select" id="q5">
@@ -92,8 +84,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
-　
+<hr>
     <h3><strong>Question 6</strong></h3>
     <h4>It is often difficult for you to relate to other people’s feelings.</h4>
     <select class="chosen-select" id="q6">
@@ -104,8 +95,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
-　
+    <hr>
     <h3><strong>Question 7</strong></h3>
     <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
     <select class="chosen-select" id="q7">
@@ -116,6 +106,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
+    <hr>
 
     <h3><strong>Question 8</strong></h3>
     <h4>You rarely get carried away by fantasies and ideas.</h4>
@@ -127,7 +118,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+<hr>
     <h3><strong>Question 9</strong></h3>
     <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
     <select class="chosen-select" id="q9">
@@ -138,7 +129,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
     <h3><strong>Question 10</strong></h3>
     <h4>You feel more energetic after spending time with a group of people.</h4>
     <select class="chosen-select" id="q10">
@@ -149,7 +140,7 @@ h4{text-align: center;}
       <option value="4">4</option>
       <option value="5">5 (Strongly Agree)</option>
     </select>
-
+    <hr>
     <br>
     <br>
 
@@ -187,57 +178,6 @@ h4{text-align: center;}
 
     </div>
   </div>
-
-<!-- Javascript -->
-  <script type="text/javascript">
-    // Capture the form inputs
-    $("#submit").on("click", function(event) {
-      event.preventDefault();
-    
-      // Form validation
-      function validateForm() {
-        let isValid = true;
-        $(".form-control").each(function() {
-          if ($(this).val() === "") {
-            isValid = false;
-          }
-        });
-      };
-      // If all required fields are filled
-      if (validateForm()) {
-        // Create an object for the user"s data
-        let userData = {
-          name: $("#name").val().trim(),
-          photo: $("#photo").val().trim(),
-          scores: [
-            $("#q1").val().trim(),
-            $("#q2").val().trim(),
-            $("#q3").val().trim(),
-            $("#q4").val().trim(),
-            $("#q5").val().trim(),
-            $("#q6").val().trim(),
-            $("#q7").val().trim(),
-            $("#q8").val().trim(),
-            $("#q9").val().trim(),
-            $("#q10").val().trim()
-          ]
-        };
-        // AJAX post the data to the friends API.
-        $.post("/api/friends", userData, function(data) {
-          console.log("I got a response: ", data);
-          // Grab the result from the AJAX post so that the best match's name and photo are displayed.
-          $("#match-name").text(data.name);
-          $("#match-img").attr("src", data.photo);
-          // Show the modal with the best match
-          $("#results-modal").modal("toggle");
-
-        });
-      }
-      else {
-        alert("All fields must be filled out before submition is possible");
-      }
-    });
-  </script>
 
 </body>
 
