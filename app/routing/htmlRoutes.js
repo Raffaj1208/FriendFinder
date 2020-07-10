@@ -7,8 +7,8 @@ module.exports = function(app) {
 app.get('/', function(request, response) {
     response.sendFile(path.join(__dirname, '../public/home.html'));
 });
-/*
-app.get('/home', function(request, response) {
+
+/*app.get('/home', function(request, response) {
     response.sendFile(path.join(__dirname, '../public/home.html'))
 }); */
 
