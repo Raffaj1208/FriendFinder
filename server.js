@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.use(function(request, response) {
-    response.json(path.join(__dirname, './app/public/home.html'));
+    response.json(path.join(__dirname, './app/public/index.html'));
 });
 
 require('./app/routing/htmlRoutes')(app);
