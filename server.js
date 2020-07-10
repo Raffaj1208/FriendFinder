@@ -7,10 +7,6 @@ let PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', function (request, response) {
-    response.json(path.join(__dirname, './app/public/index.html'));
-});
-
 require('./app/routing/htmlRoutes')(app);
 require('./app/routing/apiRoutes')(app);
 
