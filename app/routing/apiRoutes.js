@@ -4,11 +4,10 @@
 Use these to handle compatability logic for friend matchup
 */
 let express = require('express');
-let app = express();
 let friends = require('../data/friends');
 let path = require('path');
 
-module.exports = function () {
+module.exports = function (app) {
     app.get('/api/friends', function(request, response) {
         response.json(friends);
     });
